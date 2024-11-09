@@ -4,7 +4,6 @@ import Asics from "../assets/ASICS Skyhand OG sneakers - Green.jpeg";
 import AsicsGel from "../assets/Asics Gel-NYC Ivy Smoke Grey - 46_5.jpeg";
 import AsicsKiko from "../assets/Asics Kiko Kostadinov x UB1-S Gel Kayano 14 'Classic Red Blue' 1201A189-600.jpeg";
 import Dunk from "../assets/Concepts x Dunk Low SB 'Green Lobster' - 44.jpeg";
-import converse from "../assets/Converse Shoes _ Converse Lift Platform Green Colorblock Overlay Sneakers 'Oat Milk' _ Color_ Cream_Green _ Size_ 6.jpeg";
 import DC from "../assets/DC Men's Court Graffik Lightweight Mesh Skate Sneaker Shoes.jpeg";
 import Nike from "../assets/Nike Dunk Low Retro EMB sneakers.jpeg";
 import NikeSb from "../assets/Nike SB Dunk Low Pro sneakers.jpeg";
