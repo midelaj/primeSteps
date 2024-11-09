@@ -20,7 +20,9 @@ function NavBar() {
         </div>
 
         <div>
-          <h1 className="justify-center font-bold text-xl ">Prime Steps</h1>
+          <h1 className="justify-center font-bold lg:text-3xl sm:text-xl">
+            Prime Steps
+          </h1>
         </div>
         <div className="flex space-x-3 absolute right-5">
           <div className="md:w-5 md:h-5 sm:w-4 sm:h-4 w-6 h-6">
@@ -38,9 +40,9 @@ function NavBar() {
             : "absolute left-[-100%]"
         }
       >
-        <p className="text-3xl mt-4 ">Sneaker</p>
-        <p className="text-3xl mt-4 ">Sports</p>
-        <p className="text-3xl mt-4 ">Bags</p>
+        <p className="text-3xl mt-4 sm:text-xl">Sneaker</p>
+        <p className="text-3xl mt-4 sm:text-xl">Sports</p>
+        <p className="text-3xl mt-4 sm:text-xl">Bags</p>
       </div>
     </div>
   );
