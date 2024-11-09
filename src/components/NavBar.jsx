@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { TiThMenuOutline } from "react-icons/ti";
-import { IoSearchOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
-import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { AiOutlineClose } from "react-icons/ai";
 
