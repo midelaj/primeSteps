@@ -8,7 +8,8 @@ import Puma from "./puma.jpg";
 import Nike from "./nike.jpg";
 import NewBalance from "./newBalance.jpg";
 import Tiger from "./tiger.jpg";
-
+import LouisVitton from "./louisVuitton.webp";
+import Vans from "./vans.webp";
 const BrandImages = [
 	{
 		name: "Adidas",
@@ -45,6 +46,14 @@ const BrandImages = [
 	{
 		name: "Tiger",
 		image: Tiger,
+	},
+	{
+		name: "Louis Vitton",
+		image: LouisVitton,
+	},
+	{
+		name: "Vans",
+		image: Vans,
 	},
 ];
 

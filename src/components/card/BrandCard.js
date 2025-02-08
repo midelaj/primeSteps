@@ -1,7 +1,6 @@
 import React from "react";
 import { CardContent, CardMedia, styled, Typography } from "@mui/material";
 import { Card } from "@mui/material";
-import BrandImages from "./assets/BrandImage";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -15,27 +14,31 @@ const cardTheme = createTheme({
 const StyledCard = styled(Card)(({ theme }) => ({
 	backgroundColor: theme.palette.primary.main,
 	color: theme.palette.secondary.main,
+	borderRadius: 0,
+	width: "250px",
+	minWidth: "250px",
 }));
 
-export default function Brand() {
+export default function BrandCard(props) {
 	return (
 		<ThemeProvider theme={cardTheme}>
-			<Card sx={{ maxWidth: 300 }}>
+			<StyledCard>
 				<CardMedia
 					component="img"
-					height="140"
-					image={BrandImages[0].image}
+					height="200"
+					jjj
+					image={props.brandLogo}
 					alt="green iguana"
 				/>
-				<StyledCard>
+				<CardContent sx={{ color: "white", display: "flex" }}>
 					<Typography>
-						{BrandImages[0].name}
+						{props.brandName}
 						<ArrowForwardIcon
-							sx={{ verticalAlign: "middle", ml: 1, fontSize: "medium" }}
+							sx={{ verticalAlign: "middle", ml: 0.5, fontSize: "medium" }}
 						/>
 					</Typography>
-				</StyledCard>
-			</Card>
+				</CardContent>
+			</StyledCard>
 		</ThemeProvider>
 	);
 }
