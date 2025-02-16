@@ -1,10 +1,9 @@
 import "./App.css";
-import Home from "./pages/Home.jsx";
-
+import Router from "../src/Router/index";
 function App() {
   return (
     <div style={{ backgroundColor: "black" }} className="App">
-      <Home />
+      <Router />
     </div>
   );
 }

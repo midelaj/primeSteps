@@ -11,6 +11,11 @@ import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { styled } from "@mui/material/styles";
 import MainImage from "../../assets/mainImage.jpeg";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ React Router for navigation
 
 const theme = createTheme({
 	components: {
@@ -39,6 +44,20 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 	},
 }));
 export default function MenuAppBar() {
+	const [menu, setMenu] = useState(null);
+	const open = Boolean(menu);
+	const navigate = useNavigate();
+
+	const handleClick = (event) => {
+		setMenu(event.currentTarget);
+	};
+	const handleClose = () => {
+		setMenu(null);
+	};
+	const handleLogin = () => {
+		handleClose();
+		navigate("/login");
+	};
 	return (
 		<div>
 			<ThemeProvider theme={theme}>
@@ -63,11 +82,20 @@ export default function MenuAppBar() {
 							</Typography>
 							<div>
 								<StyledIconButton>
-									<LocalMallOutlinedIcon
-										sx={{ mr: 2 }}
-									/>
+									<LocalMallOutlinedIcon sx={{ mr: 2 }} />
 									<SearchSharpIcon sx={{ mr: 2 }} />
-									<AccountCircle sx={{ mr: 2 }} />
+									<Button onClick={handleClick}>
+										<AccountCircle />
+									</Button>
+									<Menu
+										id="basic-menu"
+										anchorEl={menu}
+										open={open}
+										onClose={handleClose}
+									>
+										<MenuItem onClick={handleLogin}>Login</MenuItem>
+										<MenuItem onClick={handleClose}>Logout</MenuItem>
+									</Menu>{" "}
 								</StyledIconButton>
 							</div>
 						</Toolbar>
@@ -75,11 +103,7 @@ export default function MenuAppBar() {
 				</Box>
 			</ThemeProvider>
 			<div>
-				<img
-					src={MainImage}
-					alt="this is show photo"
-					style={{ width: "100%" }}
-				/>
+				<img src={MainImage} alt="this is shoe" style={{ width: "100%" }} />
 			</div>
 		</div>
 	);
