@@ -25,26 +25,29 @@ const CategoryBox = styled(Box)(({ backgroundImage }) => ({
 export default function Category() {
 	return (
 		<div>
-			{shopCategory.map((category, index) => (
-				<CategoryBox
-					key={index}
-					backgroundImage={category.backgroundImage}
-					component="section"
-				>
-					<Button
-						variant="contained"
-						size="large"
-						sx={{
-							backgroundColor: "Black",
-							color: "white",
-							borderRadius: "20px",
-							alignItems: "center",
-						}}
+			{" "}
+			<div>
+				{shopCategory.map((category, index) => (
+					<CategoryBox
+						key={index}
+						backgroundImage={category.backgroundImage}
+						component="section"
 					>
-						Shop Men
-					</Button>
-				</CategoryBox>
-			))}
+						<Button
+							variant="contained"
+							size="large"
+							sx={{
+								backgroundColor: "Black",
+								color: "white",
+								borderRadius: "20px",
+								alignItems: "center",
+							}}
+						>
+							Shop Men
+						</Button>
+					</CategoryBox>
+				))}
+			</div>
 		</div>
 	);
 }

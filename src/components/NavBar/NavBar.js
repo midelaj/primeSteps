@@ -10,7 +10,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { styled } from "@mui/material/styles";
-import MainImage from "../../assets/mainImage.jpeg";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -102,9 +101,6 @@ export default function MenuAppBar() {
 					</AppBar>
 				</Box>
 			</ThemeProvider>
-			<div>
-				<img src={MainImage} alt="this is shoe" style={{ width: "100%" }} />
-			</div>
 		</div>
 	);
 }

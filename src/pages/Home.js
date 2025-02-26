@@ -4,6 +4,7 @@ import Brand from "../components/brand/Brand.js";
 import Category from "../components/category/Category.js";
 import Footer from "../components/footer/Footer.js";
 import Mail from "../components/mail/Mail.js";
+import FilterBar from "../components/filterBar/FilterBar.js";
 
 export default function Home() {
 	return (

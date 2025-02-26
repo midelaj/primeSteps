@@ -2,7 +2,7 @@ import React from "react";
 import BrandCard from "../card/BrandCard.js";
 import BrandImage from "./assets/BrandImage.js";
 import { styled } from "@mui/material";
-
+import MainImage from "../../assets/mainImage.jpeg";
 const CustomBrandCard = styled("div")(({ theme }) => ({
 	display: "flex",
 	flexWrap: "wrap",
@@ -10,9 +10,9 @@ const CustomBrandCard = styled("div")(({ theme }) => ({
 	justifyContent: "center",
 
 	[theme.breakpoints.down("sm")]: {
-		flexWrap: "nowrap", // Prevent wrapping
-		overflowX: "auto", // Enable horizontal scrolling
-		scrollSnapType: "x mandatory", // Smooth snap effect
+		flexWrap: "nowrap",
+		overflowX: "auto",
+		scrollSnapType: "x mandatory",
 		paddingBottom: "10px",
 	},
 }));
@@ -20,13 +20,13 @@ const CustomBrandCard = styled("div")(({ theme }) => ({
 export default function Brand() {
 	return (
 		<div>
+			<div>
+				<img src={MainImage} alt="this is shoe" style={{ width: "100%" }} />
+			</div>
+
 			<CustomBrandCard>
-				{BrandImage.map((brand, index) => (
-					<BrandCard
-						key={index}
-						brandName={brand.name}
-						brandLogo={brand.image}
-					/>
+				{BrandImage.map((brand) => (
+					<BrandCard brandName={brand.name} brandLogo={brand.image} />
 				))}
 			</CustomBrandCard>
 		</div>
